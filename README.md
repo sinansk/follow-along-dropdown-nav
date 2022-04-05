@@ -1,2 +1,2 @@
-A navigation like [stripe's](https://stripe.com/)  
+A navigation like [stripe](https://stripe.com/)'s  
 https://sinansk.github.io/follow-along-dropdown-nav/

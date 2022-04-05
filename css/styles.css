@@ -1,0 +1,163 @@
+html {
+  box-sizing: border-box;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #11998e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h2 {
+  margin-top: 0;
+  padding-top: 0.8em;
+}
+
+nav {
+  position: relative;
+  perspective: 600px;
+}
+
+.cool > li > a {
+  color: #f3eada;
+  text-decoration: none;
+  font-size: 20px;
+  /* background: rgba(0,0,0,0.1); */
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cool > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  padding: 20px;
+  top: -20px;
+  transition: all 0.5s;
+  transform: translateY(100px);
+  will-change: opacity;
+  display: none;
+}
+
+.trigger-enter .dropdown {
+  display: block;
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
+.dropdownBackground {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: #e5f4ec; /* fallback for old browsers */
+  border-radius: 10px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+    0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: #e5f4ec;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.bio {
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.7;
+}
+
+.bio img {
+  float: left;
+  margin-right: 20px;
+  margin-top: -50px;
+}
+
+.projects {
+  min-width: 300px;
+}
+
+.projects li {
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.projects a {
+  text-decoration: none;
+  color: #61c589;
+  font-size: 17px;
+}
+
+.projects a:hover {
+  color: #11998e;
+  font-size: 18px;
+}
+
+a.button {
+  background: black;
+  display: block;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
+.button[href*="twitter"] {
+  background: #019fe9;
+}
+.button[href*="instagram"] {
+  background: #e1306c;
+}
+.button[href*="linkedin"] {
+  background: #0e76a8;
+}
